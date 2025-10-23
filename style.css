@@ -1,0 +1,177 @@
+/* Earth tone palette */
+:root {
+    --primary: #6b705c;
+    --secondary: #a5a58d;
+    --accent: #d9cab3;
+    --light: #f4f1de;
+    --hover: #b7b39d;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+}
+
+header nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+header nav a:hover {
+    color: var(--accent);
+}
+
+/* Form Card (Login/Register) */
+.form-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: 2px solid var(--accent);
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--hover);
+}
+
+.success-message {
+    text-align: center;
+    font-weight: bold;
+    color: green;
+    margin-top: 10px;
+}
+
+/* Dashboard Section */
+.dashboard-section {
+    margin: 50px auto;
+    padding: 30px 20px;
+    max-width: 1200px;
+    background-color: var(--light);
+}
+
+/* Two-column layout for doctor and appointment form */
+.dashboard-grid-two-columns {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+/* Cards take more width to fill the page */
+.dashboard-grid-two-columns .card {
+    flex: 1 1 48%;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    border: 1px solid #dcdcdc;
+}
+
+/* Headings inside cards */
+.card h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+    color: var(--primary);
+}
+
+/* Appointments Table Card */
+.card.full-width {
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* Login/Register section */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .dashboard-grid-two-columns {
+        flex-direction: column;
+    }
+    .dashboard-grid-two-columns .card {
+        flex: 1 1 100%;
+    }
+}
+
